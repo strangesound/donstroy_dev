@@ -95,6 +95,67 @@
   }
 }
 
+@keyframes about-textscale {
+  0% {
+    transform: scale(1);
+    letter-spacing: 0px;
+  }
+  20% {
+    transform: scale(1.1);
+    letter-spacing: 3;
+  }
+  80% {
+    transform: scale(1);
+    letter-spacing: 0px;
+  }
+
+  100% {
+    transform: scale(1);
+    letter-spacing: 0;
+  }
+}   
+
+
+@keyframes about-light-circle-scale {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes about-normal-circle-scale {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.about-light-circle-scale-animation{
+  animation: about-light-circle-scale 1.5s infinite linear;
+}
+
+.about-normal-circle-scale-animation{
+  animation: about-normal-circle-scale 1.5s infinite linear;
+}
+
 .text-scale-animation {
   animation: textscale 4s infinite ease-in-out;
 }
@@ -115,10 +176,23 @@
   animation: yellow-circle-scale 8s infinite ease-in-out;  
 }
 
+.about-textscale-animation{
+  animation: about-textscale 1.5s infinite ease-in-out; 
+}
+
 @font-face {
   font-family: Stolzl;
   src: url(../assets/Stolzl/Stolzl-Bold.woff2);
+  font-weight: bold;
 }
+
+@font-face {
+  font-family: Stolzl;
+  src: url(../assets/Stolzl/Stolzl-Medium.woff2);
+  font-weight: medium;
+}
+
+
 
 .button-advantages {
   display: flex;
@@ -133,6 +207,8 @@
   overflow: hidden;
   position: relative;
 }
+
+
 
 .button-advantages__text {
   margin: auto;
@@ -185,4 +261,36 @@
   width: 322px;
   height: 116px;
   background-color: #21b1e7;
+}
+
+
+.button-about {
+  display: flex;
+  width: 281px;
+  height: 47px;
+  border: black;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.button-about__text {
+  margin: auto;
+  font-family: Stolzl;
+  font-style: normal;
+  font-weight: medium;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  color: #000000;
 }
