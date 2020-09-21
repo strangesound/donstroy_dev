@@ -14,6 +14,7 @@
 
   100% {
     transform: scale(1);
+    letter-spacing: 0px;
   }
 }
 
@@ -49,16 +50,69 @@
   }
 }
 
-.scale {
-  animation: textscale 3s infinite linear;
+@keyframes yellow-textscale {
+  0% {
+    transform: scale(1);
+    letter-spacing: 0px;
+  }
+  6% {
+    transform: scale(1.1);
+    letter-spacing: 4px;
+  }
+  22% {
+    transform: scale(1);
+    letter-spacing: 0px;
+  }
+
+  100% {
+    transform: scale(1);
+    letter-spacing: 0px;
+  }
+}
+
+
+@keyframes yellow-circle-scale {
+  0% {
+    transform: scale(0);
+    opacity: 100%;
+  }
+  16% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1);
+    opacity: 100%;
+  }
+
+  75% {
+    transform: scale(1);
+    opacity: 0%;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0%;
+  }
+}
+
+.text-scale-animation {
+  animation: textscale 4s infinite ease-in-out;
 }
 
 .light-circle-animation {
-  animation: light-circle-scale 3s infinite linear;
+  animation: light-circle-scale 4s infinite ease-in-out;
 }
 
 .normal-circle-animation {
-  animation: normal-circle-scale 3s infinite linear;
+  animation: normal-circle-scale 4s infinite ease-in-out;
+}
+
+.yellow-textscale-animation {
+  animation: yellow-textscale 8s infinite ease-in-out;  
+}
+
+.yellow-circle-scale-animation {
+  animation: yellow-circle-scale 8s infinite ease-in-out;  
 }
 
 @font-face {
@@ -105,6 +159,14 @@
   width: 500px;
   height: 500px;
   background-color: #44bae7;
+  border-radius: 50%;
+}
+
+.light-circle-yellow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: #FCCB2B;
   border-radius: 50%;
 }
 
