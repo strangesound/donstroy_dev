@@ -1,0 +1,126 @@
+@keyframes textscale {
+  0% {
+    transform: scale(1);
+    letter-spacing: 0px;
+  }
+  27% {
+    transform: scale(1.1);
+    letter-spacing: 3px;
+  }
+  71% {
+    transform: scale(1);
+    letter-spacing: 0px;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes light-circle-scale {
+  0% {
+    transform: scale(0);
+  }
+  16% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes normal-circle-scale {
+  0% {
+    transform: scale(0);
+  }
+  11% {
+    transform: scale(0);
+  }
+  32% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scale {
+  animation: textscale 3s infinite linear;
+}
+
+.light-circle-animation {
+  animation: light-circle-scale 3s infinite linear;
+}
+
+.normal-circle-animation {
+  animation: normal-circle-scale 3s infinite linear;
+}
+
+@font-face {
+  font-family: Stolzl;
+  src: url(../assets/Stolzl/Stolzl-Bold.woff2);
+}
+
+.button-advantages {
+  display: flex;
+  width: 322px;
+  height: 116px;
+  border: black;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.button-advantages__text {
+  margin: auto;
+  font-family: "Stolzl";
+  font-weight: bold;
+  font-style: normal;
+
+  font-size: 24px;
+  line-height: 100%;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.light-circle {
+  position: absolute;
+  /* opacity: 10%; */
+  /* top: 50%;
+  left: 50%; */
+  width: 500px;
+  height: 500px;
+  background-color: #44bae7;
+  border-radius: 50%;
+}
+
+.normal-circle {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: #21b1e7;
+  border-radius: 50%;
+}
+
+.blue-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 322px;
+  height: 116px;
+  background-color: #21b1e7;
+}
