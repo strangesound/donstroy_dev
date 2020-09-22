@@ -148,6 +148,68 @@
   }
 }
 
+/* Close button */
+@keyframes close-button-scale {
+  0% {
+    width:60px;
+  }
+  50% {
+    width:60px;
+  }
+
+  70% {
+    width: 0px;
+  }
+
+  100% {
+    width: 0px;
+  }
+}  
+
+@keyframes close-light-circle-scale {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes close-normal-circle-scale {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.close-button-scale-animation {
+  animation: close-button-scale 1s infinite linear;
+}
+
+.close-light-circle-scale-animation{
+  animation: about-light-circle-scale 1s infinite linear;
+}
+
+.close-normal-circle-scale-animation{
+  animation: about-normal-circle-scale 1s infinite linear;
+}
+
 .about-light-circle-scale-animation{
   animation: about-light-circle-scale 1.5s infinite linear;
 }
@@ -293,4 +355,69 @@
   text-transform: uppercase;
 
   color: #000000;
+}
+
+.button-close-all{
+  display: flex;
+  width: 120px;
+  height: 120px;
+  border: black;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-color: #E93749;
+}
+ .left-pad{
+   position: absolute;
+   width: 60px;
+   height: 6px;
+   background-color: white;
+   transform: rotate(45deg);
+   transition: .5s;
+ }
+
+ /* #container:hover > #cube { background-color: yellow; } */
+
+ .button-close-all:hover .left-pad {
+  width: 0px;
+ }
+
+ .button-close-all:hover .right-pad {
+  width: 0px;
+ }
+
+ .right-pad{
+  position: absolute;
+  width: 60px;
+  height: 6px;
+  background-color: white;
+  transform: rotate(-45deg);
+  transition: .5s;
+}
+
+
+
+.close-light-circle {
+  position: absolute;
+  /* opacity: 10%; */
+  /* top: 50%;
+  left: 50%; */
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  opacity: 20%;
+  border-radius: 50%;
+}
+
+
+.close-normal-circle {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: #E93749;
+  border-radius: 50%;
 }
